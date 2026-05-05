@@ -1,0 +1,37 @@
+<section class="products-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-label">Our Products</span>
+        <h2 class="section-title">Uniforms & Labels for <span>Every Need</span></h2>
+        <div class="divider"></div>
+      </div>
+      <p class="section-desc">
+        From school uniforms to corporate workwear, and from printed labels to woven bags — we cover all your textile branding needs.
+      </p>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn" [class.active]="activeTab === 'uniforms'" (click)="activeTab = 'uniforms'">
+        👔 Uniforms (8)
+      </button>
+      <button class="tab-btn" [class.active]="activeTab === 'labels'" (click)="activeTab = 'labels'">
+        🏷️ Labels & Bags (4)
+      </button>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of currentProducts">
+        <div class="product-img">
+          <img [src]="product.image" [alt]="product.name" loading="lazy" />
+          <span class="product-badge">{{ product.category }}</span>
+        </div>
+        <div class="product-body">
+          <div class="product-icon">{{ product.icon }}</div>
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-desc">{{ product.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+<section class="why-section">
+  <div class="container">
+    <div class="why-header">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">The Shweta Enterprises <span>Difference</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">
+        Trusted by schools, companies and organizations across Mumbai — here's what sets us apart.
+      </p>
+    </div>
+
+    <div class="reasons-grid">
+      <div class="reason-card" *ngFor="let reason of reasons; let i = index">
+        <div class="reason-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+        <div class="reason-icon">{{ reason.icon }}</div>
+        <h3 class="reason-title">{{ reason.title }}</h3>
+        <p class="reason-desc">{{ reason.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>

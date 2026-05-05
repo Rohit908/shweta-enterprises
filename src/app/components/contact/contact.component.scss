@@ -1,0 +1,89 @@
+.contact-section { background: var(--white); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.info-cards { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--cream);
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+
+  &:hover { border-color: var(--gold); box-shadow: 0 4px 16px rgba(201,168,76,0.12); }
+
+  .info-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+
+  div { display: flex; flex-direction: column; gap: 4px; }
+
+  strong { font-size: 0.85rem; font-weight: 600; color: var(--navy); }
+
+  span { font-size: 0.83rem; color: var(--gray); line-height: 1.5;
+    a { color: var(--gold); &:hover { text-decoration: underline; } }
+  }
+}
+
+.form-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid var(--border);
+
+  h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--navy); margin-bottom: 28px; }
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  label { font-size: 0.82rem; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    background: var(--white);
+    transition: border-color 0.3s;
+    outline: none;
+
+    &:focus { border-color: var(--gold); }
+    &::placeholder { color: #aaa; }
+  }
+
+  textarea { resize: vertical; }
+}
+
+.success-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 64px 40px;
+  text-align: center;
+  border: 1px solid var(--border);
+
+  .success-icon { font-size: 3rem; margin-bottom: 16px; }
+  h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--navy); margin-bottom: 12px; }
+  p { color: var(--gray); margin-bottom: 28px; }
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 28px; }
+}
