@@ -24,6 +24,9 @@
       <div class="product-card" *ngFor="let product of currentProducts">
         <div class="product-img">
           <img [src]="product.image" [alt]="product.name" loading="lazy" />
+          <div class="product-overlay">
+            <a routerLink="/contact" class="overlay-btn">Get Quote →</a>
+          </div>
           <span class="product-badge">{{ product.category }}</span>
         </div>
         <div class="product-body">
